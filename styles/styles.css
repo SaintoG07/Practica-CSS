@@ -26,6 +26,7 @@ header{
     display: flex;
     position: fixed;
     top: 0;
+    z-index: 500;
 
     background-color: rgb(122, 166, 151);
     padding: 10px;
@@ -148,9 +149,13 @@ input:focus{
     width: 50px;
     height: 50px;
     margin-left: auto;
+    margin-right: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    flex-shrink: 0;
+    flex-grow: 0;
     
     /* padding: 10px; */
     background-color: chartreuse;
@@ -178,9 +183,39 @@ input:focus{
     visibility: hidden;
 }
 
-p{
-    margin-top: 0;
+
+.caja-de-mesaje-izquierdo{
+    width: max-content;
+    max-width: 80%;
+    margin-top: 100px;
+    margin-left: 15px;
+    position: relative;
+
+    background-color: cyan;
+    border-radius: 0px 7px 7px 7px;
+    padding: 5px;
+
+    z-index: 0;
 }
+
+.caja-de-mesaje-izquierdo::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 0;
+    left: -5px;
+
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 7px;
+
+    /* border-bottom-right-radius: 100px  100px;
+    border-top-right-radius: 7px; */
+
+    background-color: cyan;
+}
+
+
 
 /* !Para moviles */
 @media (max-width: 768px) {
