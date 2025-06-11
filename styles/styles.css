@@ -120,4 +120,12 @@ p{
     :root {
         font-size: 14px;
     }
+
+    .nombre-del-usuario{
+        font-size: 1.5rem;
+    }
+
+    .conexion-o-hora-de-ultima-vez{
+        font-size: 8px;
+    }
 }
