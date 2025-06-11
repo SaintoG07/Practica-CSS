@@ -94,15 +94,82 @@ footer{
     box-sizing: border-box;
     width: 100%;
     position: fixed;
-    bottom: 0;
+    bottom: 10px;
+    display: flex;
 
-    background-color: brown;
-    padding: 10px;
+    /* background-color: brown;
+    padding: 10px; */
 }
 
 .inviar-mensajes-y-mas{
+    width: 100%;
     display: flex;
+    margin-right: 10px;
+    margin-left: 5px;
+
+    background-color: blueviolet;
+    padding: 10px;
+    border-radius: 18px;
 }
+
+.stickers{
+    margin-right: 5px;
+}
+
+input{
+    height: 100%;
+
+    background-color: blueviolet;
+    border: none;
+    caret-color: chartreuse;
+    color: white;
+}
+
+input::placeholder{
+    color: black;
+    opacity: 0.5;
+}
+
+input:focus{
+    outline: none;
+}
+
+
+
+.mas-archivos{
+    margin-left: auto;
+}
+
+.camara{
+    margin-left: 16px;
+}
+
+.grabar-voz{
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* padding: 10px; */
+    background-color: chartreuse;
+    border-radius: 50%;
+}
+
+
+.stickers,
+.mas-archivos,
+.camara{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* #mic{
+    fill: 1;
+    font-variation-settings:
+        'FILL' 1;
+} */
 
 .caja-invisible{
     width: 168.425px;
@@ -122,7 +189,7 @@ p{
     }
 
     .nombre-del-usuario{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .conexion-o-hora-de-ultima-vez{
