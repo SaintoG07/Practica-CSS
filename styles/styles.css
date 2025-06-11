@@ -97,14 +97,16 @@ footer{
     position: fixed;
     bottom: 10px;
     display: flex;
+    align-items: center;
 
     /* background-color: brown;
     padding: 10px; */
 }
 
 .inviar-mensajes-y-mas{
-    width: 100%;
+    width: auto;
     display: flex;
+    flex: 1;
     margin-right: 10px;
     margin-left: 5px;
 
@@ -118,8 +120,10 @@ footer{
 }
 
 input{
+    flex: 1;
+    min-width: 0;
+    width: auto;
     height: 100%;
-
     background-color: blueviolet;
     border: none;
     caret-color: chartreuse;
@@ -229,5 +233,13 @@ input:focus{
 
     .conexion-o-hora-de-ultima-vez{
         font-size: 8px;
+    }
+
+    .inviar-mensajes-y-mas{
+        margin-right: 5px;
+    }
+
+    .caja-de-mesaje-izquierdo{
+        font-size: 14px;
     }
 }
