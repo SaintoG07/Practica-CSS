@@ -22,6 +22,7 @@ body{
 
 header{
     box-sizing: border-box;
+    max-height: 70px;
     width: 100%;;
     display: flex;
     position: fixed;
@@ -128,6 +129,7 @@ input{
     min-width: 0;
     width: 100%;
     height: 100%;
+    margin-right: 5px;
     background-color: blueviolet;
     border: none;
     caret-color: chartreuse;
@@ -139,9 +141,9 @@ input::placeholder{
     opacity: 0.5;
 }
 
-/* input:focus{
+input:focus{
     outline: none;
-} */
+}
 
 
 
@@ -184,26 +186,47 @@ input::placeholder{
         'FILL' 1;
 } */
 
-.caja-invisible{
+/* .caja-invisible{
     width: 168.425px;
     height: 65.6px;
 
     visibility: hidden;
+} */
+
+#Primer-mensaje{
+    margin-top: 75px;
 }
 
 
 .caja-de-mesaje-izquierdo{
     width: max-content;
     max-width: 80%;
-    margin-top: 100px;
+    margin-top: 5px;
     margin-left: 15px;
     position: relative;
 
     background-color: cyan;
     border-radius: 0px 7px 7px 7px;
-    padding: 5px;
+    /* padding: 5px; */
 
     z-index: 0;
+}
+
+.mensaje-interno-izquierdo{
+    padding: 5px 5px 2px 5px;
+}
+
+/* .hora-del-invio{
+    background-color: cyan;
+    padding: 0 2px 2px 2px;
+    font-size: 10px;
+} */
+
+.hora{
+    padding: 0 2px 2px 2px;
+    font-size: 10px;
+    margin-left: auto;
+    width: max-content;
 }
 
 .caja-de-mesaje-izquierdo::before{
@@ -223,6 +246,50 @@ input::placeholder{
     background-color: cyan;
 }
 
+.caja-de-mesaje-derecho{
+    width: max-content;
+    max-width: 80%;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: 15px;
+    position: relative;
+
+    background-color: crimson;
+    border-radius: 7px 0 7px 7px;
+    /* padding: 5px; */
+
+    z-index: 0;
+}
+
+.mensaje-interno-derecho{
+    padding: 5px 5px 2px 5px;
+}
+
+.hora-derecho{
+    width: max-content;
+    margin-right: auto;
+
+    font-size: 10px;
+    padding: 0 2px 2px 2px;
+}
+
+.caja-de-mesaje-derecho::after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 0;
+    right: -5px;
+
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 7px;
+
+    background-color: crimson;
+}
+
+
+
+
 
 
 /* !Para moviles */
@@ -232,7 +299,7 @@ input::placeholder{
     }
 
     .nombre-del-usuario{
-        font-size: 1rem;
+        font-size: 16;
     }
 
     .conexion-o-hora-de-ultima-vez{
@@ -245,5 +312,9 @@ input::placeholder{
 
     .caja-de-mesaje-izquierdo{
         font-size: 14px;
+    }
+
+    footer{
+        bottom: 5px;
     }
 }
