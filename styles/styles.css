@@ -207,13 +207,13 @@ input:focus{
 
     background-color: cyan;
     border-radius: 0px 7px 7px 7px;
-    /* padding: 5px; */
+    padding: 5px 5px 2px 5px;
 
     z-index: 0;
 }
 
 .mensaje-interno-izquierdo{
-    padding: 5px 5px 2px 5px;
+    padding: 5px 0px 0px 0px;
 }
 
 /* .hora-del-invio{
@@ -245,7 +245,34 @@ input:focus{
 
     background-color: cyan;
 }
+/* ?Mensaje respuesta izquierda */
+.caja-padre-de-respuesta-izquierdo{
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
 
+    padding: 0 3px 3px 6px;
+    background-color: rgb(59, 177, 177);
+    border-radius: 7px 7px 7px 7px;
+}
+
+.caja-padre-de-respuesta-izquierdo::before{
+    content: '';
+    position: absolute;
+    left: 0;
+
+    width: 3px;
+    height: 100%;
+
+    background-color: rgb(227, 31, 70);
+}
+
+.Respueta-otro-derecho{
+    color: rgb(227, 31, 70);
+}
+
+
+/* !Mensajes derechos: */
 .caja-de-mesaje-derecho{
     width: max-content;
     max-width: 80%;
@@ -256,21 +283,21 @@ input:focus{
 
     background-color: crimson;
     border-radius: 7px 0 7px 7px;
-    /* padding: 5px; */
+    padding: 5px 5px 2px 5px;
 
     z-index: 0;
 }
 
 .mensaje-interno-derecho{
-    padding: 5px 5px 2px 5px;
+    padding: 5px 0px 0px 0px;
 }
 
 .hora-derecho{
     width: max-content;
-    margin-right: auto;
+    margin-left: auto;
 
     font-size: 10px;
-    padding: 0 2px 2px 2px;
+    /* padding: 0 2px 2px 2px; */
 }
 
 .caja-de-mesaje-derecho::after{
@@ -287,6 +314,31 @@ input:focus{
     background-color: crimson;
 }
 
+/* ?Respuetas a mensajes derecho: */
+.caja-padre-de-respuesta-Derecho{
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+
+    padding: 0px 3px 3px 6px;
+    border-radius: 7px 7px 7px 7px;
+    background-color: rgb(176, 51, 76);
+    /* box-shadow: -4px 0 0 -1px black; */
+}
+
+.caja-padre-de-respuesta-Derecho::before{
+    content: '';
+    height: 100%;
+    width: 3px;
+    position: absolute;
+    left: 0;
+
+    background-color: aquamarine;
+}
+
+.Respueta-tu-derecho{
+    color: aquamarine;
+}
 
 
 
