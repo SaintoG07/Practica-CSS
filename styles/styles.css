@@ -102,6 +102,8 @@ footer{
 
     /* background-color: brown;
     padding: 10px; */
+
+    z-index: 400;
 }
 
 .inviar-mensajes-y-mas{
@@ -341,20 +343,55 @@ input:focus{
 }
 
 /* ?Mensaje derecho: FOTO */
-.caja-de-mesaje-derecho-foto{
-    box-sizing: border-box;
+.mensaje-derecho-globo-imegen{
+    display: flex;
+    justify-content: end;
+
+    margin-top: 5px
+}
+
+.globo-derecho{
     position: relative;
+    max-width: 60%;
+    max-height: 400px;
     margin-right: 15px;
-    max-height: 40%;
-    height: 30%;
-    max-width: 80%;
-    width: max-content;
-    margin-top: 5px;
-    margin-left: auto;
 
     background-color: crimson;
-    border: 5px solid crimson;
     border-radius: 7px 0 7px 7px;
+    padding: 5px;
+}
+
+.globo-derecho img{
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+
+    border-radius: 7px;
+}
+
+.globo-derecho::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 10px;
+    height: 10px;
+
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 7px;
+
+    background-color: crimson;
+}
+
+.caja-de-mesaje-derecho-foto{
+    /* box-sizing: border-box; */
+    max-width: 60%;  /* El ancho máximo del globo */
+    max-height: 00px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #e0e0e0; /* Estilo del globo */
 }
 
 /* .mensaje-interno-derecho-foto{
@@ -364,16 +401,15 @@ input:focus{
 } */
 
 
-.mensaje-interno-derecho-foto-interno{
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+/* .caja-de-mesaje-derecho-foto img{
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+} */
 
-    border-radius: 6px;
-    /* border: 5px solid crimson; */
-}
-
-.caja-de-mesaje-derecho-foto::after{
+/* .caja-de-mesaje-derecho-foto::after{
     content: '';
     width: 10px;
     height: 10px;
@@ -385,9 +421,12 @@ input:focus{
     border-top-right-radius: 7px;
 
     background-color: crimson;
-}
+} */
 
 .reenvio-derecho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -395,23 +434,23 @@ input:focus{
     width: 50px;
     height: 50px;
 
-    background-color: blue;
+    color: white;
 }
 
 .hora-derecho-foto{
     position: absolute;
     bottom: 0;
     right: 0;
-    margin-bottom: 2px;
-    margin-right: 5px;
+    margin-bottom: 7px;
+    margin-right: 10px;
 
     font-size: 10px;
     color: white;
 }
 
-.audio-derecho{
+/* .audio-derecho{
     background-color: aqua;
-}
+} */
 
 /* #musicPlayer{
     background-color: blue;
@@ -423,7 +462,15 @@ input:focus{
     visibility: hidden;
 }
 
+.caja-invisible-o-transparente{
+    position: fixed;
+    width: 100%;
+    height: 65px;
+    bottom: 0;
 
+    background-color: #333;
+    z-index: 300;
+}
 
 /* !Para moviles */
 @media (max-width: 768px) {
@@ -451,18 +498,7 @@ input:focus{
         bottom: 5px;
     }
 
-    .caja-de-mesaje-derecho-foto{
-        height: 30%;
-        max-height: 30%;
-    }
-
-    .caja-invisible-footer{
-        height: 60px;
-    }
-}
-
-@media(max-width: 400px) {
-    .caja-de-mesaje-derecho-foto{
-        height: 15%;
+    .caja-invisible-o-transparente{
+        height: 55px;
     }
 }
