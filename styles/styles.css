@@ -55,13 +55,12 @@ header{
     margin-right: 10px;
 }
 
-img{
+.foto-de-perfil-class{
     width: 100%;
     height: 100%;
 
     border-radius: 50%;
 }
-
 .nombre-y-conexion{
     margin-top: auto;
     margin-bottom: auto;
@@ -94,6 +93,7 @@ img{
 
 footer{
     box-sizing: border-box;
+    max-height: 50px;
     width: 100%;
     position: fixed;
     bottom: 10px;
@@ -340,7 +340,88 @@ input:focus{
     color: aquamarine;
 }
 
+/* ?Mensaje derecho: FOTO */
+.caja-de-mesaje-derecho-foto{
+    box-sizing: border-box;
+    position: relative;
+    margin-right: 15px;
+    max-height: 40%;
+    height: 30%;
+    max-width: 80%;
+    width: max-content;
+    margin-top: 5px;
+    margin-left: auto;
 
+    background-color: crimson;
+    border: 5px solid crimson;
+    border-radius: 7px 0 7px 7px;
+}
+
+/* .mensaje-interno-derecho-foto{
+    margin-top: 5px;
+    width: 100%;
+    height: 100%;
+} */
+
+
+.mensaje-interno-derecho-foto-interno{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+
+    border-radius: 6px;
+    /* border: 5px solid crimson; */
+}
+
+.caja-de-mesaje-derecho-foto::after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 7px;
+
+    background-color: crimson;
+}
+
+.reenvio-derecho{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -65px;
+    width: 50px;
+    height: 50px;
+
+    background-color: blue;
+}
+
+.hora-derecho-foto{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 2px;
+    margin-right: 5px;
+
+    font-size: 10px;
+    color: white;
+}
+
+.audio-derecho{
+    background-color: aqua;
+}
+
+/* #musicPlayer{
+    background-color: blue;
+} */
+
+.caja-invisible-footer{
+    width: auto;
+    height: 65px;
+    visibility: hidden;
+}
 
 
 
@@ -355,7 +436,7 @@ input:focus{
     }
 
     .conexion-o-hora-de-ultima-vez{
-        font-size: 8px;
+        font-size: 8.5px;
     }
 
     .inviar-mensajes-y-mas{
@@ -368,5 +449,20 @@ input:focus{
 
     footer{
         bottom: 5px;
+    }
+
+    .caja-de-mesaje-derecho-foto{
+        height: 30%;
+        max-height: 30%;
+    }
+
+    .caja-invisible-footer{
+        height: 60px;
+    }
+}
+
+@media(max-width: 400px) {
+    .caja-de-mesaje-derecho-foto{
+        height: 15%;
     }
 }
